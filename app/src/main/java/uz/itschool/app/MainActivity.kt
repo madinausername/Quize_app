@@ -17,11 +17,15 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Enter your name", Toast.LENGTH_SHORT).show()
             }
             else{
-                var intent = Intent(this,MainActivity2::class.java)
+                var intent = Intent(this,Select_cardviews::class.java)
                 intent.putExtra("${setData.name}", input.text.toString())
                 startActivity(intent)
                 finish()
             }
+        }
+        sing_up_button.setOnClickListener {
+            var intent=Intent(this, Sign_in_registration::class.java)
+            startActivity(intent)
         }
 
     }

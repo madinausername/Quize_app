@@ -1,47 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#162023"
-    android:padding="7dp"
-    android:orientation="vertical">
+    tools:context=".Sign_in_registration"
+    android:background="#162023">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginStart="16dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_registration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_to_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/image_back"/>
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            tools:srcCompat="@drawable/quize"
-            android:padding="20dp"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sing_up_button"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@drawable/shape_b"
-            android:backgroundTint="#F2954D"
-            android:text="Sing up"
-            android:textColor="#FFFFFF"
-            android:layout_gravity="end"
-            android:layout_marginLeft="135dp"
-            android:layout_marginTop="20dp"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
+            android:src="@drawable/quize"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 
-
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_marginTop="123dp"
+        android:id="@+id/linearLayout_registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -50,11 +42,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log in "
+            android:text="Registration"
             android:textColor="#F2954D"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -63,28 +56,22 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintVertical_bias="0.865" />
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/input"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Username"
-                android:padding="15dp"
-                android:textColorHint="@color/white"
-                tools:layout_editor_absoluteX="90dp"
-                tools:layout_editor_absoluteY="249dp"
-                android:background="@drawable/question_option"
-                android:layout_gravity="center_horizontal"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/editTextTextPersonName_username"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:textColorHint="@color/white"
+            android:padding="15dp"
+            android:textColor="#959393"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="249dp"
+            android:background="@drawable/question_option"/>
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/editTextTextPassword_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -92,19 +79,20 @@
             android:hint="Password"
             android:padding="15dp"
             android:inputType="textPassword"
+            android:textColorHint="@color/white"
             tools:layout_editor_absoluteX="58dp"
             tools:layout_editor_absoluteY="298dp"
             android:background="@drawable/question_option"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_next"
-            android:layout_width="100dp"
+            android:id="@+id/register"
+            android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/shape_b"
             android:backgroundTint="#F2954D"
-            android:text="Start"
+            android:text="Register"
             android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -116,4 +104,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
