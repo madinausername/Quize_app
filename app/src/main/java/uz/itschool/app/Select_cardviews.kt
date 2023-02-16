@@ -3,6 +3,7 @@ package uz.itschool.app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.activity_select_cardviews.*
 import kotlinx.android.synthetic.main.activity_select_cardviews.back_to_button
@@ -32,6 +33,10 @@ class Select_cardviews : AppCompatActivity() {
         }
         back_to_button.setOnClickListener {
             var intent=Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        show_score_button.setOnClickListener {
+            var intent = Intent(this, Scores::class.java)
             startActivity(intent)
         }
     }
