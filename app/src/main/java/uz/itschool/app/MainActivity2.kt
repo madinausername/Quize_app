@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import org.w3c.dom.Text
 import uz.itschool.app.Result
@@ -72,6 +73,7 @@ class MainActivity2 : AppCompatActivity() {
                         intent.putExtra(setData.name, Name.toString())
                         intent.putExtra(setData.score, score.toString())
                         intent.putExtra("total size",questionList!!.size.toString())
+                        intent.putExtra("${setData.name}", input.text.toString())
                         startActivity(intent)
                         finish()
                     }

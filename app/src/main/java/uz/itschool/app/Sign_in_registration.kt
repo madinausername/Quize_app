@@ -32,11 +32,6 @@ class Sign_in_registration : AppCompatActivity() {
             var pos=false
             if (users==""){
                 userList = mutableListOf()
-                userList.add(User(editTextTextPersonName_username.text.toString(),editTextTextPassword_password.text.toString()))
-                Toast.makeText(this,"Succesfully registered", Toast.LENGTH_SHORT).show()
-                val str = gson.toJson(userList)
-                edit.putString("users", str).commit()
-
             }else{
                 userList = gson.fromJson(users,type)
                 for( i in userList){

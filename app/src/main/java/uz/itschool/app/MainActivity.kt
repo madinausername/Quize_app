@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_result.*
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+    public var name_for_intent=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,9 +44,8 @@ class MainActivity : AppCompatActivity() {
 
                 if (pos == true) {
                     var intent = Intent(this, Select_cardviews::class.java)
+                    name_for_intent=input.text.toString()
                     intent.putExtra("${setData.name}", input.text.toString())
-                    intent.putExtra("username_for_Score",input.text.toString())
-                    intent.putExtra("user_password_for_Score",editTextTextPassword2.text.toString())
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "You did not registered yet!", Toast.LENGTH_SHORT).show()

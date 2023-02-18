@@ -35,9 +35,5 @@ class Select_cardviews : AppCompatActivity() {
             var intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        show_score_button.setOnClickListener {
-            var intent = Intent(this, Scores::class.java)
-            startActivity(intent)
-        }
     }
 }
